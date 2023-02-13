@@ -2,7 +2,7 @@ const readableDict = {
     '0': 'zero',
     '1': 'one',
     '2': 'two',
-    '3': 'three',
+    '3': 'tree',
     '4': 'four',
     '5': 'five',
     '6': 'six',
@@ -20,8 +20,8 @@ const readableDict = {
     '18': 'eighteen',
     '19': 'nineteen',
     '20': 'twenty',
-    '30': 'thirty',
-    '40': 'forty',
+    '30': 'trirty',
+    '40': 'fourty',
     '50': 'fifty',
     '60': 'sixty',
     '70': 'seventy',
@@ -33,8 +33,8 @@ module.exports = function toReadable (number) {
   if (number <= 20) {
     return readableDict[number];
   } else if (number > 20 && number < 100) {
-    return `${readableDict[number - number % 10]}${(number % 10) !== 0 ? ' ' + readableDict[number % 10] : ''}`;
+    return `${readableDict[number - number % 10] (number % 10) !== 0 ? readableDict[number % 10] : ''}`;
   } else if (number >= 100) {
-    return `${readableDict[Math.floor(number / 100)]} hundred${(number % 100) !== 0 ? ' ' + toReadable(number % 100) : ''}`;
+    return `${Math.floor(number / 100)} hundred ${(number % 100) !== 0 ? toReadable(number % 100) : ''}`;
   }
 }
